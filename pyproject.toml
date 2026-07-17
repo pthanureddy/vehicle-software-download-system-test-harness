@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vehicle-software-download-system-test-harness"
+version = "1.0.0"
+description = "Requirements-based software-download system testing for simulated vehicle ECUs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Thanu Reddy Pathipati" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+vehicle-swdl = "vehicle_swdl.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vehicle_swdl*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

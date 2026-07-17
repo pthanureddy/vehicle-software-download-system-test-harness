@@ -1,0 +1,39 @@
+{
+  "campaign_id": "complete-vehicle-baseline-2026.40.0",
+  "description": "Synthetic three-ECU software-download campaign",
+  "images": [
+    {
+      "ecu_id": "gateway",
+      "version": "5.5.0",
+      "file": "packages/gateway-5.5.0.bin",
+      "size": 47,
+      "sha256": "df1f0dcb7ff76779c6c0be9df19cecef563e1a2182ac0f8f3aa4ce17d14bb68a",
+      "compatible_hardware": ["GW-HW-02"],
+      "minimum_bootloader": "2.0.0",
+      "minimum_battery_voltage": 12.0,
+      "depends_on": []
+    },
+    {
+      "ecu_id": "ccm",
+      "version": "2.2.0",
+      "file": "packages/ccm-2.2.0.bin",
+      "size": 52,
+      "sha256": "938345c2c6b9acb6e813b3c899ccec227c913061af61a48683cc8f9b69798697",
+      "compatible_hardware": ["CCM-HW-03"],
+      "minimum_bootloader": "3.0.0",
+      "minimum_battery_voltage": 12.0,
+      "depends_on": ["gateway"]
+    },
+    {
+      "ecu_id": "infotainment",
+      "version": "9.4.0",
+      "file": "packages/infotainment-9.4.0.bin",
+      "size": 52,
+      "sha256": "fc40a3c644ad6fb62dab911464db3c74bf6651442ccde6827ca3bd707b19644b",
+      "compatible_hardware": ["IHU-HW-04"],
+      "minimum_bootloader": "4.0.0",
+      "minimum_battery_voltage": 12.0,
+      "depends_on": ["gateway", "ccm"]
+    }
+  ]
+}

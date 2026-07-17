@@ -1,0 +1,132 @@
+{
+  "plan_id": "swdl-complete-system-regression-2026.40.0",
+  "description": "Requirements-based SWDL scenarios over a deterministic software loopback",
+  "scenarios": [
+    {
+      "id": "SWDL-SYS-001",
+      "requirement_id": "REQ-SWDL-001",
+      "name": "Install a compatible three-ECU baseline in dependency order",
+      "expected": {
+        "status": "COMPLETED",
+        "failure_code": null,
+        "updated_ecu_count": 3,
+        "rollback_count": 0,
+        "versions": {"gateway": "5.5.0", "ccm": "2.2.0", "infotainment": "9.4.0"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-002",
+      "requirement_id": "REQ-SWDL-002",
+      "name": "Retry and resume after a transient Ethernet-style chunk loss",
+      "faults": {"drop_once": {"gateway": [1]}},
+      "expected": {
+        "status": "COMPLETED",
+        "failure_code": null,
+        "updated_ecu_count": 3,
+        "minimum_retry_count": 1,
+        "versions": {"gateway": "5.5.0", "ccm": "2.2.0", "infotainment": "9.4.0"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-003",
+      "requirement_id": "REQ-SWDL-003",
+      "name": "Reject a corrupted image and roll back previously activated ECUs",
+      "faults": {"corrupt": {"ccm": [0]}},
+      "expected": {
+        "status": "FAILED",
+        "failure_code": "IMAGE_HASH_MISMATCH",
+        "updated_ecu_count": 0,
+        "rollback_count": 1,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-004",
+      "requirement_id": "REQ-SWDL-004",
+      "name": "Block the campaign when battery voltage is below the download threshold",
+      "overrides": {"battery_voltage": 11.7},
+      "expected": {
+        "status": "BLOCKED",
+        "failure_code": "LOW_BATTERY_VOLTAGE",
+        "updated_ecu_count": 0,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-005",
+      "requirement_id": "REQ-SWDL-005",
+      "name": "Block the campaign outside the permitted service ignition state",
+      "overrides": {"ignition_state": "drive"},
+      "expected": {
+        "status": "BLOCKED",
+        "failure_code": "INVALID_IGNITION_STATE",
+        "updated_ecu_count": 0,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-006",
+      "requirement_id": "REQ-SWDL-006",
+      "name": "Reject an image for incompatible ECU hardware",
+      "overrides": {"ecu_hardware_id": {"ccm": "CCM-HW-01"}},
+      "expected": {
+        "status": "BLOCKED",
+        "failure_code": "HARDWARE_INCOMPATIBLE",
+        "updated_ecu_count": 0,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-007",
+      "requirement_id": "REQ-SWDL-007",
+      "name": "Reject an update when the bootloader is below the required version",
+      "overrides": {"ecu_bootloader_version": {"gateway": "1.9.0"}},
+      "expected": {
+        "status": "BLOCKED",
+        "failure_code": "BOOTLOADER_TOO_OLD",
+        "updated_ecu_count": 0,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-008",
+      "requirement_id": "REQ-SWDL-008",
+      "name": "Roll back the complete campaign after a post-install health-check failure",
+      "faults": {"health_check_fail": ["infotainment"]},
+      "expected": {
+        "status": "FAILED",
+        "failure_code": "POST_INSTALL_HEALTH_CHECK_FAILED",
+        "updated_ecu_count": 0,
+        "rollback_count": 3,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-009",
+      "requirement_id": "REQ-SWDL-009",
+      "name": "Fail safely when chunk delivery exhausts the network retry budget",
+      "faults": {"drop_always": {"gateway": [0]}},
+      "expected": {
+        "status": "FAILED",
+        "failure_code": "NETWORK_RETRY_EXHAUSTED",
+        "updated_ecu_count": 0,
+        "versions": {"gateway": "5.4.2", "ccm": "2.1.0", "infotainment": "9.3.1"}
+      }
+    },
+    {
+      "id": "SWDL-SYS-010",
+      "requirement_id": "REQ-SWDL-010",
+      "name": "Skip ECUs that already contain the target baseline",
+      "overrides": {
+        "ecu_active_version": {"gateway": "5.5.0", "ccm": "2.2.0", "infotainment": "9.4.0"}
+      },
+      "expected": {
+        "status": "COMPLETED",
+        "failure_code": null,
+        "updated_ecu_count": 0,
+        "skipped_ecu_count": 3,
+        "versions": {"gateway": "5.5.0", "ccm": "2.2.0", "infotainment": "9.4.0"}
+      }
+    }
+  ]
+}

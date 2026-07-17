@@ -1,0 +1,34 @@
+{
+  "vehicle_id": "SYNTHETIC-VEHICLE-001",
+  "battery_voltage": 12.6,
+  "ignition_state": "service",
+  "ecus": [
+    {
+      "ecu_id": "gateway",
+      "name": "Vehicle Gateway",
+      "hardware_id": "GW-HW-02",
+      "bootloader_version": "2.1.0",
+      "storage_capacity": 4096,
+      "active_slot": "A",
+      "slot_versions": {"A": "5.4.2", "B": null}
+    },
+    {
+      "ecu_id": "ccm",
+      "name": "Core Compute Module",
+      "hardware_id": "CCM-HW-03",
+      "bootloader_version": "3.0.0",
+      "storage_capacity": 4096,
+      "active_slot": "A",
+      "slot_versions": {"A": "2.1.0", "B": null}
+    },
+    {
+      "ecu_id": "infotainment",
+      "name": "Infotainment Head Unit",
+      "hardware_id": "IHU-HW-04",
+      "bootloader_version": "4.2.0",
+      "storage_capacity": 4096,
+      "active_slot": "A",
+      "slot_versions": {"A": "9.3.1", "B": null}
+    }
+  ]
+}
