@@ -1,0 +1,1027 @@
+{
+  "cases": [
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.2.0",
+          "gateway": "5.5.0",
+          "infotainment": "9.4.0"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [
+          {
+            "after_version": "5.5.0",
+            "before_version": "5.4.2",
+            "chunk_count": 6,
+            "ecu_id": "gateway",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          },
+          {
+            "after_version": "2.2.0",
+            "before_version": "2.1.0",
+            "chunk_count": 7,
+            "ecu_id": "ccm",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          },
+          {
+            "after_version": "9.4.0",
+            "before_version": "9.3.1",
+            "chunk_count": 7,
+            "ecu_id": "infotainment",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          }
+        ],
+        "failure_code": null,
+        "message": "Software-download campaign completed",
+        "network_attempt_count": 20,
+        "network_retry_count": 0,
+        "network_trace": [
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 7,
+            "chunk_index": 5,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          }
+        ],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "COMPLETED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 3,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-001",
+      "mismatches": [],
+      "name": "Install a compatible three-ECU baseline in dependency order",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-001"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.2.0",
+          "gateway": "5.5.0",
+          "infotainment": "9.4.0"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [
+          {
+            "after_version": "5.5.0",
+            "before_version": "5.4.2",
+            "chunk_count": 6,
+            "ecu_id": "gateway",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          },
+          {
+            "after_version": "2.2.0",
+            "before_version": "2.1.0",
+            "chunk_count": 7,
+            "ecu_id": "ccm",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          },
+          {
+            "after_version": "9.4.0",
+            "before_version": "9.3.1",
+            "chunk_count": 7,
+            "ecu_id": "infotainment",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          }
+        ],
+        "failure_code": null,
+        "message": "Software-download campaign completed",
+        "network_attempt_count": 21,
+        "network_retry_count": 1,
+        "network_trace": [
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "chunk_index": 1,
+            "ecu_id": "gateway",
+            "outcome": "dropped_once"
+          },
+          {
+            "attempt": 2,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 7,
+            "chunk_index": 5,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          }
+        ],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "COMPLETED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 3,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-002",
+      "mismatches": [],
+      "name": "Retry and resume after a transient Ethernet-style chunk loss",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-002"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [
+          {
+            "after_version": "5.5.0",
+            "before_version": "5.4.2",
+            "chunk_count": 6,
+            "ecu_id": "gateway",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          }
+        ],
+        "failed_ecu_id": "ccm",
+        "failure_code": "IMAGE_HASH_MISMATCH",
+        "message": "Reassembled image failed SHA-256 validation",
+        "network_attempt_count": 13,
+        "network_retry_count": 0,
+        "network_trace": [
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 7,
+            "chunk_index": 5,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "ccm",
+            "outcome": "corrupted"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          }
+        ],
+        "rollback_count": 1,
+        "skipped_ecu_count": 0,
+        "status": "FAILED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-003",
+      "mismatches": [],
+      "name": "Reject a corrupted image and roll back previously activated ECUs",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-003"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [],
+        "failure_code": "LOW_BATTERY_VOLTAGE",
+        "message": "Battery 11.7 V is below 12 V",
+        "network_attempt_count": 0,
+        "network_retry_count": 0,
+        "network_trace": [],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "BLOCKED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-004",
+      "mismatches": [],
+      "name": "Block the campaign when battery voltage is below the download threshold",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-004"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [],
+        "failure_code": "INVALID_IGNITION_STATE",
+        "message": "Ignition state must be 'service', found 'drive'",
+        "network_attempt_count": 0,
+        "network_retry_count": 0,
+        "network_trace": [],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "BLOCKED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-005",
+      "mismatches": [],
+      "name": "Block the campaign outside the permitted service ignition state",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-005"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [],
+        "failure_code": "HARDWARE_INCOMPATIBLE",
+        "message": "ECU ccm hardware 'CCM-HW-01' is not compatible",
+        "network_attempt_count": 0,
+        "network_retry_count": 0,
+        "network_trace": [],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "BLOCKED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-006",
+      "mismatches": [],
+      "name": "Reject an image for incompatible ECU hardware",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-006"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [],
+        "failure_code": "BOOTLOADER_TOO_OLD",
+        "message": "ECU gateway bootloader 1.9.0 is below 2.0.0",
+        "network_attempt_count": 0,
+        "network_retry_count": 0,
+        "network_trace": [],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "BLOCKED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-007",
+      "mismatches": [],
+      "name": "Reject an update when the bootloader is below the required version",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-007"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [
+          {
+            "after_version": "5.5.0",
+            "before_version": "5.4.2",
+            "chunk_count": 6,
+            "ecu_id": "gateway",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          },
+          {
+            "after_version": "2.2.0",
+            "before_version": "2.1.0",
+            "chunk_count": 7,
+            "ecu_id": "ccm",
+            "staged_slot": "B",
+            "status": "UPDATED"
+          }
+        ],
+        "failed_ecu_id": "infotainment",
+        "failure_code": "POST_INSTALL_HEALTH_CHECK_FAILED",
+        "message": "ECU infotainment failed the simulated post-install health check",
+        "network_attempt_count": 20,
+        "network_retry_count": 0,
+        "network_trace": [
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 7,
+            "chunk_index": 5,
+            "ecu_id": "gateway",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "ccm",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 0,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 1,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 2,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 3,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 4,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 8,
+            "chunk_index": 5,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          },
+          {
+            "attempt": 1,
+            "byte_count": 4,
+            "chunk_index": 6,
+            "ecu_id": "infotainment",
+            "outcome": "delivered"
+          }
+        ],
+        "rollback_count": 3,
+        "skipped_ecu_count": 0,
+        "status": "FAILED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-008",
+      "mismatches": [],
+      "name": "Roll back the complete campaign after a post-install health-check failure",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-008"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "before_versions": {
+          "ccm": "2.1.0",
+          "gateway": "5.4.2",
+          "infotainment": "9.3.1"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [],
+        "failed_ecu_id": "gateway",
+        "failure_code": "NETWORK_RETRY_EXHAUSTED",
+        "message": "ECU gateway chunk 0 was not delivered after 3 attempts",
+        "network_attempt_count": 3,
+        "network_retry_count": 2,
+        "network_trace": [
+          {
+            "attempt": 1,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "dropped"
+          },
+          {
+            "attempt": 2,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "dropped"
+          },
+          {
+            "attempt": 3,
+            "chunk_index": 0,
+            "ecu_id": "gateway",
+            "outcome": "dropped"
+          }
+        ],
+        "rollback_count": 0,
+        "skipped_ecu_count": 0,
+        "status": "FAILED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-009",
+      "mismatches": [],
+      "name": "Fail safely when chunk delivery exhausts the network retry budget",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-009"
+    },
+    {
+      "campaign_result": {
+        "after_versions": {
+          "ccm": "2.2.0",
+          "gateway": "5.5.0",
+          "infotainment": "9.4.0"
+        },
+        "before_versions": {
+          "ccm": "2.2.0",
+          "gateway": "5.5.0",
+          "infotainment": "9.4.0"
+        },
+        "campaign_id": "complete-vehicle-baseline-2026.40.0",
+        "ecu_results": [
+          {
+            "after_version": "5.5.0",
+            "before_version": "5.5.0",
+            "chunk_count": 0,
+            "ecu_id": "gateway",
+            "status": "SKIPPED_ALREADY_CURRENT"
+          },
+          {
+            "after_version": "2.2.0",
+            "before_version": "2.2.0",
+            "chunk_count": 0,
+            "ecu_id": "ccm",
+            "status": "SKIPPED_ALREADY_CURRENT"
+          },
+          {
+            "after_version": "9.4.0",
+            "before_version": "9.4.0",
+            "chunk_count": 0,
+            "ecu_id": "infotainment",
+            "status": "SKIPPED_ALREADY_CURRENT"
+          }
+        ],
+        "failure_code": null,
+        "message": "Software-download campaign completed",
+        "network_attempt_count": 0,
+        "network_retry_count": 0,
+        "network_trace": [],
+        "rollback_count": 0,
+        "skipped_ecu_count": 3,
+        "status": "COMPLETED",
+        "update_order": [
+          "gateway",
+          "ccm",
+          "infotainment"
+        ],
+        "updated_ecu_count": 0,
+        "vehicle_id": "SYNTHETIC-VEHICLE-001"
+      },
+      "case_id": "SWDL-SYS-010",
+      "mismatches": [],
+      "name": "Skip ECUs that already contain the target baseline",
+      "passed": true,
+      "requirement_id": "REQ-SWDL-010"
+    }
+  ],
+  "plan_id": "swdl-complete-system-regression-2026.40.0",
+  "requirements": [
+    "REQ-SWDL-001",
+    "REQ-SWDL-002",
+    "REQ-SWDL-003",
+    "REQ-SWDL-004",
+    "REQ-SWDL-005",
+    "REQ-SWDL-006",
+    "REQ-SWDL-007",
+    "REQ-SWDL-008",
+    "REQ-SWDL-009",
+    "REQ-SWDL-010"
+  ],
+  "summary": {
+    "case_count": 10,
+    "failed_case_count": 0,
+    "network_attempt_count": 77,
+    "network_retry_count": 3,
+    "passed_case_count": 10,
+    "requirement_count": 10,
+    "rollback_count": 4
+  }
+}
