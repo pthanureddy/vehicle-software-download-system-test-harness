@@ -16,7 +16,7 @@ The reference plan covers 10 higher-level system scenarios and 10 requirements a
 - Already-current ECU handling and structured failure codes
 - Requirement-linked JSON test plans plus JSON, Markdown, and CSV results
 - 63 automated unit, integration, system-runner, reporting, and CLI tests
-- GitHub Actions on Python 3.11 and 3.12
+- GitHub Actions on Ubuntu and Windows with Python 3.11 and 3.12
 
 ## Evidence boundary
 
@@ -70,8 +70,17 @@ tests/                unit, integration, system-runner, report, and CLI regressi
 examples/             synthetic firmware packages, vehicle, manifest, and system test plan
 docs/                 architecture, requirements, strategy, and evidence boundary
 artifacts/             generated reference results
-.github/workflows/     Python 3.11/3.12 CI
+.github/workflows/     Ubuntu/Windows, Python 3.11/3.12 CI
 ```
+
+## Cross-platform package integrity
+
+The files under `examples/packages/` are synthetic firmware fixtures whose
+declared byte counts and SHA-256 digests are part of the manifest contract.
+Although their sample contents are human-readable, they must be checked out as
+binary data. The repository's `.gitattributes` marks `*.bin` as binary so Git
+does not convert LF bytes to CRLF on Windows. Both Windows and Ubuntu CI jobs
+validate the manifest before executing the reference system test plan.
 
 ## Failure handling
 

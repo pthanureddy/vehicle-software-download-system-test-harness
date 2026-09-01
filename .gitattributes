@@ -1,0 +1,5 @@
+* text=auto
+
+# Firmware-package fixtures are byte-addressed payloads. Treating them as text
+# changes LF bytes to CRLF on Windows checkouts and invalidates size/hash checks.
+*.bin binary
