@@ -15,7 +15,7 @@ The reference plan covers 10 higher-level system scenarios and 10 requirements a
 - Dual-bank bootloader state, activation, post-install health checks, and transactional rollback
 - Already-current ECU handling and structured failure codes
 - Requirement-linked JSON test plans plus JSON, Markdown, and CSV results
-- 63 automated unit, integration, system-runner, reporting, and CLI tests
+- 103 automated unit, integration, system-runner, reporting, calibration, release, and CLI tests
 - GitHub Actions on Ubuntu and Windows with Python 3.11 and 3.12
 
 ## Evidence boundary
@@ -71,6 +71,21 @@ examples/             synthetic firmware packages, vehicle, manifest, and system
 docs/                 architecture, requirements, strategy, and evidence boundary
 artifacts/             generated reference results
 .github/workflows/     Ubuntu/Windows, Python 3.11/3.12 CI
+```
+
+## Software and calibration delivery
+
+The harness also validates synthetic calibration parameters against an independent
+contract and the firmware version/hardware target. It builds and verifies a
+deterministic release ZIP containing firmware, calibration, contract, and digest
+inventory. CI delivers the validated ZIP, report and Python wheel only after the
+Windows/Linux test matrix passes. This does not deploy calibration to hardware.
+See [calibration release design, commands and limits](docs/calibration-release.md).
+
+```powershell
+vehicle-swdl validate-calibration --manifest examples/manifest.json --contract examples/calibration_contract.json --calibration examples/calibration.json
+vehicle-swdl build-release --manifest examples/manifest.json --contract examples/calibration_contract.json --calibration examples/calibration.json --output artifacts/ci-release/software-calibration.zip --report artifacts/ci-release/report.json
+vehicle-swdl verify-release --bundle artifacts/ci-release/software-calibration.zip
 ```
 
 ## Cross-platform package integrity

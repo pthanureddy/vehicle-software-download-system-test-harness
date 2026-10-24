@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "contract_id": "ccm-driveability-v1",
+  "ecu_id": "ccm",
+  "compatible_software": ["2.2.0"],
+  "compatible_hardware": ["CCM-HW-03"],
+  "parameters": {
+    "torque_limit_nm": {"unit": "Nm", "minimum": 0, "maximum": 600},
+    "shift_delay_s": {"unit": "s", "minimum": 0.1, "maximum": 1.5},
+    "thermal_derate_c": {"unit": "degC", "minimum": 80, "maximum": 120}
+  }
+}

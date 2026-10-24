@@ -1,14 +1,14 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "vehicle-software-download-system-test-harness"
-version = "1.0.0"
+version = "1.1.0"
 description = "Requirements-based software-download system testing for simulated vehicle ECUs"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 authors = [{ name = "Thanu Reddy Pathipati" }]
 dependencies = []
 

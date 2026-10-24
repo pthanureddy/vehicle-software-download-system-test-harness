@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "calibration_id": "ccm-driveability-2026.10",
+  "contract_id": "ccm-driveability-v1",
+  "ecu_id": "ccm",
+  "software_version": "2.2.0",
+  "hardware_id": "CCM-HW-03",
+  "parameters": [
+    {"name": "torque_limit_nm", "value": 420, "unit": "Nm"},
+    {"name": "shift_delay_s", "value": 0.3, "unit": "s"},
+    {"name": "thermal_derate_c", "value": 105, "unit": "degC"}
+  ]
+}

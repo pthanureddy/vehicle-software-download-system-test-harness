@@ -1,0 +1,10 @@
+{
+  "artifact_count": 5,
+  "bundle_bytes": 3658,
+  "bundle_sha256": "5cdc8a26917e0429d86b9d790bf62e276992b5e9c09a2d66b15e59c2b3fc4cab",
+  "calibration_id": "ccm-driveability-2026.10",
+  "contract_id": "ccm-driveability-v1",
+  "ecu_id": "ccm",
+  "parameter_count": 3,
+  "software_version": "2.2.0"
+}

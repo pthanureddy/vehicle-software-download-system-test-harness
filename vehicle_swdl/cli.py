@@ -9,6 +9,7 @@ from .models import FormatError, load_manifest
 from .reporting import write_system_test_report
 from .runner import run_system_test_plan
 from .topology import dependency_order
+from .calibration_release import build_release, validate_calibration, verify_release
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -24,12 +25,34 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--manifest", type=Path, required=True)
     run.add_argument("--plan", type=Path, required=True)
     run.add_argument("--output-dir", type=Path, required=True)
+    calibration = commands.add_parser("validate-calibration", help="Check calibration compatibility and parameter bounds")
+    release = commands.add_parser("build-release", help="Build a reproducible software and calibration archive")
+    for command in (calibration, release):
+        command.add_argument("--manifest", type=Path, required=True)
+        command.add_argument("--contract", type=Path, required=True)
+        command.add_argument("--calibration", type=Path, required=True)
+    release.add_argument("--output", type=Path, required=True)
+    release.add_argument("--report", type=Path)
+    verify = commands.add_parser("verify-release", help="Verify bundle inventory, integrity, and calibration contract")
+    verify.add_argument("--bundle", type=Path, required=True)
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     try:
+        if args.command in {"validate-calibration", "build-release", "verify-release"}:
+            if args.command == "validate-calibration":
+                result = validate_calibration(args.manifest, args.contract, args.calibration)
+            elif args.command == "build-release":
+                result = build_release(args.manifest, args.contract, args.calibration, args.output)
+                if args.report:
+                    args.report.parent.mkdir(parents=True, exist_ok=True)
+                    args.report.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+            else:
+                result = verify_release(args.bundle)
+            print(json.dumps(result, indent=2, sort_keys=True))
+            return 0
         if args.command == "validate-manifest":
             manifest = load_manifest(args.manifest)
             order = dependency_order(manifest.images)
@@ -50,6 +73,6 @@ def main(argv: list[str] | None = None) -> int:
         write_system_test_report(report, args.output_dir)
         print(json.dumps(report["summary"], indent=2, sort_keys=True))
         return int(bool(report["summary"]["failed_case_count"]))
-    except (FormatError, ValueError) as exc:
+    except (FormatError, ValueError, OSError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
